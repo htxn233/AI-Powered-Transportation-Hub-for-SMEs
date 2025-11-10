@@ -282,18 +282,18 @@ export function ShippersPage() {
                   </div>
                 </div>
                 <DropdownMenu>
-                  <DropdownMenuTrigger asChild onClick={(e) => e.stopPropagation()}>
+                  <DropdownMenuTrigger asChild onClick={(e: { stopPropagation: () => any; }) => e.stopPropagation()}>
                     <Button variant="ghost" size="icon">
                       <MoreVertical className="w-4 h-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
-                    <DropdownMenuItem onClick={(e) => { e.stopPropagation(); setSelectedShipper(shipper); }}>
+                    <DropdownMenuItem onClick={(e: { stopPropagation: () => void; }) => { e.stopPropagation(); setSelectedShipper(shipper); }}>
                       View Details
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={(e) => e.stopPropagation()}>Edit Info</DropdownMenuItem>
-                    <DropdownMenuItem onClick={(e) => e.stopPropagation()}>Reassign Area</DropdownMenuItem>
-                    <DropdownMenuItem onClick={(e) => e.stopPropagation()}>View History</DropdownMenuItem>
+                    <DropdownMenuItem onClick={(e: { stopPropagation: () => any; }) => e.stopPropagation()}>Edit Info</DropdownMenuItem>
+                    <DropdownMenuItem onClick={(e: { stopPropagation: () => any; }) => e.stopPropagation()}>Reassign Area</DropdownMenuItem>
+                    <DropdownMenuItem onClick={(e: { stopPropagation: () => any; }) => e.stopPropagation()}>View History</DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>

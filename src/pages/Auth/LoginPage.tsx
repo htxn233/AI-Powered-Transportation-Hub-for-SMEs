@@ -14,7 +14,6 @@ export function LoginPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock login - redirect to dashboard
     navigate('/dashboard/overview');
   };
 

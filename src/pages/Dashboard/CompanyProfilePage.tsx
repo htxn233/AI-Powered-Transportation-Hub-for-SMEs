@@ -417,7 +417,7 @@ export function CompanyProfilePage() {
                 </div>
                 <Switch 
                   checked={twoFactorEnabled}
-                  onCheckedChange={(checked) => {
+                  onCheckedChange={(checked: boolean | ((prevState: boolean) => boolean)) => {
                     setTwoFactorEnabled(checked);
                     toast.success(checked ? '2FA enabled' : '2FA disabled');
                   }}

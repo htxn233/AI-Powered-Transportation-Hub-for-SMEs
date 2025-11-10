@@ -53,9 +53,6 @@ export function LandingPage() {
                   </Button>
                 </Link>
                 <Link to="/dashboard/overview">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                    Try Demo
-                  </Button>
                 </Link>
               </div>
               <div className="flex items-center gap-8 pt-4">
@@ -209,9 +206,6 @@ export function LandingPage() {
               </Button>
             </Link>
             <Link to="/dashboard/overview">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground/10">
-                Try Demo
-              </Button>
             </Link>
           </div>
         </div>

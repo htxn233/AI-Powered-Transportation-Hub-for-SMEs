@@ -7,15 +7,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Package } from 'lucide-react';
 import { useState } from 'react';
 
-export function RegisterPage() {
+export function RegisterUserPage() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    companyName: '',
-    taxId: '',
     email: '',
     phone: '',
-    address: '',
-    businessType: '',
     userName: '',
     password: '',
     confirmPassword: '',
@@ -23,7 +19,6 @@ export function RegisterPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock registration - redirect to dashboard
     navigate('/dashboard/overview');
   };
 
@@ -46,37 +41,14 @@ export function RegisterPage() {
 
         <Card>
           <CardHeader>
-            <CardTitle>Register Your Business</CardTitle>
+            <CardTitle>Register Your Account</CardTitle>
             <CardDescription>Create an account to start optimizing your deliveries</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="companyName">Company Name *</Label>
-                  <Input 
-                    id="companyName" 
-                    placeholder="Acme Corporation"
-                    value={formData.companyName}
-                    onChange={(e) => handleChange('companyName', e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="taxId">Tax ID / Registration Number *</Label>
-                  <Input 
-                    id="taxId" 
-                    placeholder="123456789"
-                    value={formData.taxId}
-                    onChange={(e) => handleChange('taxId', e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="email">Business Email *</Label>
+                  <Label htmlFor="email"> Email *</Label>
                   <Input 
                     id="email" 
                     type="email" 
@@ -98,35 +70,6 @@ export function RegisterPage() {
                   />
                 </div>
               </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="address">Business Address *</Label>
-                <Input 
-                  id="address" 
-                  placeholder="123 Main St, City, State, ZIP"
-                  value={formData.address}
-                  onChange={(e) => handleChange('address', e.target.value)}
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="businessType">Business Type *</Label>
-                <Select onValueChange={(value: string) => handleChange('businessType', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select business type" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="retail">Retail / E-commerce</SelectItem>
-                    <SelectItem value="wholesale">Wholesale Distribution</SelectItem>
-                    <SelectItem value="manufacturing">Manufacturing</SelectItem>
-                    <SelectItem value="food">Food & Beverage</SelectItem>
-                    <SelectItem value="logistics">Logistics Provider</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
               <div className="space-y-2">
                 <Label htmlFor="userName">User Name *</Label>
                 <Input 
