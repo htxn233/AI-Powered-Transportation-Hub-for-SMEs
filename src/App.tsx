@@ -4,18 +4,18 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { LandingPage } from "./pages/LandingPage";
+import { LandingPage } from "./pages/HomePage/LandingPage";
 import { LoginPage } from "./pages/Auth/LoginPage";
 import { RegisterPage } from "./pages/Auth/RegisterPage";
-import { OverviewPage } from "./pages/Dashboard/OverviewPage";
-import { OrdersPage } from "./pages/Dashboard/OrdersPage";
+import { OverviewPage } from "./pages/CompanyManagement/OverviewPage";
+import { OrdersPage } from "./pages/Order/OrdersPage";
 import { WarehousesPage } from "./pages/Dashboard/WarehousesPage";
 import { DispatchPage } from "./pages/Dashboard/DispatchPage";
-import { ShippersPage } from "./pages/Dashboard/ShippersPage";
-import { ReportsPage } from "./pages/Dashboard/ReportsPage";
+import { ShippersPage } from "./pages/CompanyManagement/ShippersPage";
+import { ReportsPage } from "./pages/CompanyManagement/ReportsPage";
 import { AdminPanelPage } from "./pages/Dashboard/AdminPanelPage";
-import { CompanyProfilePage } from "./pages/Dashboard/CompanyProfilePage";
-import { TrackingPage } from "./pages/TrackingPage";
+import { CompanyProfilePage } from "./pages/CompanyManagement/CompanyProfilePage";
+import { TrackingPage } from "./pages/HomePage/TrackingPage";
 import { DashboardLayout } from "./components/Layout/DashboardLayout";
 import { Toaster } from "./components/ui/sonner";
 
