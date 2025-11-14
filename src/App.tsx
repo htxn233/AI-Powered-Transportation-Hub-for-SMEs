@@ -9,15 +9,17 @@ import { LoginPage } from "./pages/Auth/LoginPage";
 import { RegisterPage } from "./pages/Auth/RegisterPage";
 import { OverviewPage } from "./pages/CompanyManagement/OverviewPage";
 import { OrdersPage } from "./pages/Order/OrdersPage";
-import { WarehousesPage } from "./pages/Dashboard/WarehousesPage";
+import { WarehousesPage } from "./pages/Warehouse/WarehousesPage";
 import { DispatchPage } from "./pages/Dashboard/DispatchPage";
 import { ShippersPage } from "./pages/CompanyManagement/ShippersPage";
-import { ReportsPage } from "./pages/CompanyManagement/ReportsPage";
+import { ReportsPage } from "./pages/Report/ReportsPage";
+import { ReportsCompanyPage } from "./pages/Report/ReportsCompanyPage";
 import { AdminPanelPage } from "./pages/Dashboard/AdminPanelPage";
 import { CompanyProfilePage } from "./pages/CompanyManagement/CompanyProfilePage";
 import { TrackingPage } from "./pages/HomePage/TrackingPage";
 import { DashboardLayout } from "./components/Layout/DashboardLayout";
 import { Toaster } from "./components/ui/sonner";
+import WarehouseInventoryPage from "./pages/Warehouse/WarehousesInventoryPage";
 
 export default function App() {
   return (
@@ -34,21 +36,22 @@ export default function App() {
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route
             index
-            element={
-              <Navigate to="/dashboard/overview" replace />
-            }
+            element={<Navigate to="/dashboard/overview" replace />}
           />
           <Route path="overview" element={<OverviewPage />} />
           <Route path="orders" element={<OrdersPage />} />
+          <Route path="warehouses" element={<WarehousesPage />} />
+          {/* 🔹 inventory route relative */}
           <Route
-            path="warehouses"
-            element={<WarehousesPage />}
+            path="warehouses/:id/inventory"
+            element={<WarehouseInventoryPage />}
           />
           <Route path="dispatch" element={<DispatchPage />} />
           <Route path="shippers" element={<ShippersPage />} />
           <Route path="reports" element={<ReportsPage />} />
           <Route path="profile" element={<CompanyProfilePage />} />
           <Route path="admin" element={<AdminPanelPage />} />
+          <Route path="/dashboard/reports/company" element={<ReportsCompanyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

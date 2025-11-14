@@ -161,10 +161,11 @@ export function ReportsPage() {
                       borderRadius: '8px'
                     }}
                   />
+                  
                   <Legend />
-                  <Line type="monotone" dataKey="orders" stroke="hsl(var(--primary))" strokeWidth={2} name="Total Orders" />
-                  <Line type="monotone" dataKey="successful" stroke="hsl(var(--chart-2))" strokeWidth={2} name="Successful" />
-                  <Line type="monotone" dataKey="failed" stroke="hsl(var(--destructive))" strokeWidth={2} name="Failed" />
+                  <Line type="monotone" dataKey="orders" stroke="#3b82f6" strokeWidth={2} name="Total Orders" />
+                  <Line type="monotone" dataKey="successful" stroke="#10b981" strokeWidth={2} name="Successful" />
+                  <Line type="monotone" dataKey="failed" stroke="#ef4444" strokeWidth={2} name="Failed" />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -228,8 +229,10 @@ export function ReportsPage() {
                     border: '1px solid hsl(var(--border))',
                     borderRadius: '8px'
                   }}
+                  labelStyle={{ color: "hsl(var(--foreground))" }}
+                  itemStyle={{ color: "hsl(var(--foreground))" }}
                 />
-                <Bar dataKey="cost" fill="hsl(var(--primary))" name="Cost ($)" />
+                <Bar dataKey="cost" fill="#2563EB" name="Cost ($)" />
               </BarChart>
             </ResponsiveContainer>
           </div>
