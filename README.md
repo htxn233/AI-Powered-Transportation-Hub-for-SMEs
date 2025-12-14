@@ -1,4 +1,4 @@
-# AI-Integrated Logistics Hub System for SMEs
+# AI-Powered Transportation Hub for SMEs
 
 A web-based logistics management system designed to support small and medium-sized enterprises (SMEs) in handling transportation, order processing, and delivery operations efficiently without owning logistics infrastructure.
 
