@@ -7,7 +7,6 @@ A web-based logistics management system designed to support small and medium-siz
 - Order creation and management
 - Barcode/QR code scanning for warehouse processing
 - Automated shipper assignment
-- AI-assisted route optimization
 - Real-time order tracking
 - Operational dashboards for logistics monitoring
 
